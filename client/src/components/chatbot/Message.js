@@ -36,25 +36,23 @@ const Botface = styled.div`
   text-align: center;
 `
 
-const Message = (props) => {
-  return (
-    <Container>
-      {props.speaks === 'bot' && (
-        <>
-          <Botface>
-            <img src={avatar} width="90%" alt="avatar of chatbot" />
-          </Botface>
-          <Botbox>{props.text}</Botbox>
-        </>
-      )}
-      {props.speaks === 'me' && (
-        <Mebox>
-          {props.text}
-          <br />
-        </Mebox>
-      )}
-    </Container>
-  )
-}
+const Message = (props) => (
+  <Container>
+    {props.speaks === 'bot' && (
+      <>
+        <Botface>
+          <img src={avatar} width="90%" alt="avatar of chatbot" />
+        </Botface>
+        <Botbox>{props.text}</Botbox>
+      </>
+    )}
+    {props.speaks === 'me' && (
+      <Mebox>
+        {props.text}
+        <br />
+      </Mebox>
+    )}
+  </Container>
+)
 
 export default Message
