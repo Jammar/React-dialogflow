@@ -19,9 +19,9 @@ const Head = styled.header`
   }
 `
 const Header = () => (
-    <Head>
-      <img src={logo} alt="Länsförsäkringars gemensamma logotyp" />
-    </Head>
+  <Head>
+    <img src={logo} alt="Länsförsäkringars gemensamma logotyp" />
+  </Head>
 )
 
 export default Header

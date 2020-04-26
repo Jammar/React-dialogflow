@@ -14,23 +14,21 @@ const Button = styled.button`
   }
 `
 
-const QuickReply = (props) => {
-  return (
-    <Button
-      as="a"
-      href="/"
-      onClick={(event) =>
-        props.click(
-          event,
-          props.reply.structValue.fields.payload.stringValue,
-          props.reply.structValue.fields.text.stringValue
-        )
-      }
-    >
-      {props.reply.structValue.fields.present.stringValue}
-      {console.log(props)}
-    </Button>
-  )
-}
+const QuickReply = (props) => (
+  <Button
+    as="a"
+    href="/"
+    onClick={(event) =>
+      props.click(
+        event,
+        props.reply.structValue.fields.payload.stringValue,
+        props.reply.structValue.fields.text.stringValue
+      )
+    }
+  >
+    {props.reply.structValue.fields.present.stringValue}
+    {console.log(props)}
+  </Button>
+)
 
 export default QuickReply
