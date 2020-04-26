@@ -58,14 +58,16 @@ class QuickReplies extends Component {
     }
   }
 
-  quickReplyText(){
-    if (this.props.text && this.props.text.stringValue){
-      return <>
-            <Botface>
-              <img src={avatar} width="90%" alt="avatar of chatbot" />
-            </Botface>
-      <Botbox>{this.props.text.stringValue}</Botbox>
-      </>
+  botTextReply() {
+    if (this.props.text && this.props.text.stringValue) {
+      return (
+        <>
+          <Botface>
+            <img src={avatar} width="90%" alt="avatar of chatbot" />
+          </Botface>
+          <Botbox>{this.props.text.stringValue}</Botbox>
+        </>
+      )
     }
   }
 
@@ -74,7 +76,7 @@ class QuickReplies extends Component {
       <Container>
         {this.props.speaks === 'bot' && (
           <>
-            { this.quickReplyText() }
+            {this.botTextReply()}
             <Quickbox>{this.renderQuickReplies(this.props.payload)}</Quickbox>
           </>
         )}
