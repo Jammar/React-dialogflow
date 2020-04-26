@@ -60,12 +60,14 @@ class QuickReplies extends Component {
 
   botTextReply() {
     if (this.props.text && this.props.text.stringValue) {
-      return <>
+      return (
+        <>
           <Botface>
             <img src={avatar} width="90%" alt="avatar of chatbot" />
           </Botface>
           <Botbox>{this.props.text.stringValue}</Botbox>
         </>
+      )
     }
   }
 
