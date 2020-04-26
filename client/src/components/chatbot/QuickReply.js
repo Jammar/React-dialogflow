@@ -27,7 +27,6 @@ const QuickReply = (props) => (
     }
   >
     {props.reply.structValue.fields.present.stringValue}
-    {console.log(props)}
   </Button>
 )
 
