@@ -50,7 +50,6 @@ const Message = (props) => {
       {props.speaks === 'me' && (
         <Mebox>
           {props.text}
-          {console.log(props)}
           <br />
         </Mebox>
       )}
